@@ -1,0 +1,10 @@
+.main {
+	margin: 20px;
+}
+.panel {
+	margin: 0 auto;
+	max-width: 500px;
+}
+.inactive {
+  display: none !important;
+}
