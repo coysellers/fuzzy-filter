@@ -23,15 +23,15 @@
 				append(ul, li)
 					.setAttribute('class', `${itemClass} ${jsClass}`);
 			})
-	});
-
+		});
+		
 	searchInput.onkeydown = function(e) {
 		let timeout = null;
 		
 		clearTimeout(timeout);
 		timeout = setTimeout(() => {
 			const items = doc.getElementsByClassName(jsClass),
-						listArray = [];
+				listArray = [];
 
 			for (let i = 0; i < items.length; i++) {
 				listArray.push(items[i]);
@@ -39,8 +39,8 @@
 
 			listArray.filter((item) => {
 				const inputValue = e.target.value,
-							expression = new RegExp(inputValue, 'g'),
-							hideClass = 'inactive';
+					expression = new RegExp(inputValue, 'g'),
+					hideClass = 'inactive';
 
 				if (item.textContent.match(expression)) {
 					item.classList.remove(hideClass);
